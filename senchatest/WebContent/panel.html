@@ -1,0 +1,63 @@
+<!-- date :: 2015. 3. 8. -->
+<!-- worker :: baekkyu.Kim -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- meta area -->
+<meta charset="UTF-8">
+
+
+<title>판넬 테스트</title>
+
+<!-- link area -->
+<link rel="text/css" href="./lib/resources/css/sencha-touch.css"/>
+
+<!-- script area -->
+<script type="text/javascript" src="./lib/sencha-touch-all-debug.js"></script>
+<script type="text/javascript">
+	Ext.application({
+		name : "PanelTest",
+		viewport : {
+			autoMaximize : true
+		},
+		launch : function() {
+			var panel1 = {
+					html : "<h1>Panel1</h1>",
+					style : "background:yellow; color:black; text-align:center;",
+					flex : 1
+			};
+			
+			var panel2 = {
+					html : "<h1>Panel2</h1>",
+					style : "background:green; color:red; text-align:center;",
+					flex : 1
+			};
+			
+			var panel3 = {
+					html : "<h1>Panel3</h1>",
+					style : "background:blue; color:white; text-align:center;",
+					flex : 1
+			};
+			
+			var rootPanel = {
+					xtype : "panel",
+					layout : {
+						type : "vbox",
+						align : "stretch",
+						pack : "justify"
+					},
+					items : [panel1, panel2, panel3]
+			};
+			
+			Ext.Viewport.add(rootPanel);
+		}
+	});
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
