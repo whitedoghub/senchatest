@@ -1,0 +1,51 @@
+<!-- date :: 2015. 3. 8. -->
+<!-- worker :: baekkyu.Kim -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- meta area -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+
+<title>Insert title here</title>
+
+<!-- link area -->
+<link rel="text/css" href="./lib/resources/css/sencha-touch.css"/>
+
+<!-- script area -->
+<script type="text/javascript" src="./lib/sencha-touch-all-debug.js"></script>
+
+
+
+<script type="text/javascript">
+	Ext.Loader.setConfig({
+		paths : {
+			"CUser" : "./lib/CUser.js"
+		}
+	});
+
+	Ext.application({
+		name : "MyWebApp",
+		requires : ["CUser"],
+		launch : function(){
+			var member = Ext.create("CUser", {
+				id : "kbk109",
+				name : "김백규",
+				age : 42
+			});
+			
+			alert(member.getInfo());
+		} 
+	});
+
+</script>
+</head>
+
+<body>
+hello world
+안녕
+<br>
+</body>
+</html>
